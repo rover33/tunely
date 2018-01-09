@@ -26,96 +26,73 @@
       </div>
     </div>
 
-    <section class="container">
-      <div class="row">
+    
+    <section id='album-form' class="container">
+        <div class="row">
         <div class="col-md-10 col-md-offset-1">
-          <h2>Albums</h2>
-        </div>
-      </div>
-      <!-- albums! -->
-      <div id='albums'>
-
-          <!-- one album -->
-          <div class="row album">
-
-            <div class="col-md-10 col-md-offset-1">
-
-              <!-- begin album internal row -->
-              <div class='row'>
-                <div class="col-md-3 col-xs-12 album-art">
-                  <img class="img-fluid" src="http://placehold.it/800x800" alt="album image">
+  
+          <form class="form-horizontal">
+            <fieldset>
+  
+              <!-- Form Name -->
+              <legend>Add New Album</legend>
+  
+              <!-- Text input-->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="name">Album Name</label>
+                <div class="col-md-4">
+                <input id="name" name="name" type="text" placeholder="" class="form-control input-md" required="">
+  
                 </div>
-
-                <div class="col-md-9 col-xs-12">
-                  <ul class="list-group">
-                    <li class="list-group-item">
-                      <h4 class='inline-header'>Album Name:</h4>
-                      <span class='album-name'>Ladyhawke</span>
-                    </li>
-
-                    <li class="list-group-item">
-                      <h4 class='inline-header'>Artist Name:</h4>
-                      <span class='artist-name'>Ladyhawke</span>
-                    </li>
-
-                    <li class="list-group-item">
-                      <h4 class='inline-header'>Released date:</h4>
-                      <span class='album-releaseDate'>2008, November 18</span>
-                    </li>
-                  </ul>
+              </div>
+  
+              <!-- Text input-->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="artistName">Artist Name</label>
+                <div class="col-md-4">
+                <input id="textinput" name="artistName" type="text" placeholder="" class="form-control input-md">
+  
                 </div>
-
               </div>
-              <!-- end of album internal row -->
-
-            </div>
-          </div>
-          <!-- end one album -->
-
-      </div>
-    </section>
-
-    <!-- begin songModal: this is not visible until you call .modal() on it -->
-    <div class="modal fade" tabindex="-1" role="dialog" id="songModal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title">Create Song</h4>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
-          </div>
-          <div class="modal-body">
-            <fieldset class='form-horizontal'>
-
-            <!-- Text input-->
-            <div class="form-group">
-              <label class="col-md-4 control-label" for="songName">Song Name</label>
-              <div class="col-md-4">
-              <input id="songName" name="songName" type="text" placeholder="" class="form-control input-md" required="">
-
+  
+              <!-- Text input-->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="releaseDate">Release Date</label>
+                <div class="col-md-4">
+                <input id="releaseDate" name="releaseDate" type="text" placeholder="1992" class="form-control input-md">
+  
+                </div>
               </div>
-            </div>
-
-            <!-- Text input-->
-            <div class="form-group">
-              <label class="col-md-4 control-label" for="trackNumber">Track Number</label>
-              <div class="col-md-4">
-              <input id="trackNumber" name="trackNumber" type="text" placeholder="" class="form-control input-md">
-
+  
+              <!-- Textarea -->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="genres">Genres (separated by commas)</label>
+                <div class="col-md-4">
+                  <textarea class="form-control" id="genres" name="genres">rock, pop</textarea>
+                </div>
               </div>
-            </div>
-
+  
+  
+              <!-- Button -->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="singlebutton">Save Album</label>
+                <div class="col-md-4">
+                  <button id="singlebutton" name="singlebutton" class="btn btn-primary">Submit</button>
+                </div>
+              </div>
             </fieldset>
-
-
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-success" id="saveSong">Save changes</button>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-
+          </form>
+        </div>
+        </div>
+      </section>
+  
+       <!--   END FORM SAMPLE -->
+  
+  
+  
+  
+  
+  
+  
   </body>
-</html>
+  </html>
