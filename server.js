@@ -99,7 +99,8 @@ app.post('/api/albums', function album_create(req,res){
       return console.log("There is an error: " + err)
     } 
     res.json(Album)
-  })
+  });
+
 });
 
 

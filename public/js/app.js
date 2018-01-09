@@ -30,9 +30,12 @@ $(this).trigger("reset");
     data: formdata,
     dataType: "string"
   }).done(function(data){
+    console.log("post can suck ass")
+    renderAlbum(data);
     })
   })
 })
+
 
 
 // this function takes a single album and renders it to the page
@@ -61,7 +64,7 @@ function renderAlbum(album) {
   "                      <li class='list-group-item'>" +
   "                        <h4 class='inline-header'>Released date:</h4>" +
   "                        <span class='album-releaseDate'>" + album.releaseDate + "</span>" +
-  "                      </li>" +
+  "                      </li>" + buildSongsHtml(album.songs);
   "                    </ul>" +
   "                  </div>" +
   "                </div>" +
@@ -73,4 +76,21 @@ function renderAlbum(album) {
   // render to the page with jQuery
   $('#albums').append(albumHtml);
 }
+
+
+function buildSongsHtml(songs) { 
+var songText = "	– "; 
+songs.forEach(function(song) { 
+  songText = songText + "(" + song.trackNumber + ") " + song.name + " – "; }); 
+  var songsHtml = songText;
+  return songsHtml; 
+}
+
+
+// "  <li class='list-group-item'> " +
+// "  <h4 class='inline-header'>Songs:</h4> " +
+// "  <span>	– (1)" + songs[0].name + " – (2) " + songs[1].name + " – (3) " + songs[2].name + " – (4) " + songs[3].name + " – (5) " + songs[4].name + " – (6) " + songs[5].name + " – (7) " +  songs[6].name + " </span> " +
+// " </li> "
+
+
 

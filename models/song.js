@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 
 var SongSchema = new Schema ({
   name: String,
-  track: Number
+  trackNumber: Number
 });
 
 
